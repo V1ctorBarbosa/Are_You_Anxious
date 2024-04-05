@@ -1,9 +1,14 @@
 //Components
 import InfoBox from "../../components/InfoBox/infoBox"
 
+//Styles
+import { Container } from "./home.styles"
+
 function Home() {
   return (
-    <InfoBox/>
+    <Container>
+        <InfoBox data={''}/>
+    </Container>
   )
 }
 

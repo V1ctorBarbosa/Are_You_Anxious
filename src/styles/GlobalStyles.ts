@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, styled } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -7,7 +7,20 @@ export const GlobalStyles = createGlobalStyle`
     * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        z-index: 1;
         font-family: "Reddit Mono", monospace;
-        background-color: ${props => props.theme.black};
+        background-color: ${(props) => props.theme.black};
     }
-`
+
+    body {
+        min-height: 100vh;
+        overflow: hidden;
+    }
+`;
+
+export const Container = styled.div`
+  height: 100vh;
+  width: 100%;
+`;

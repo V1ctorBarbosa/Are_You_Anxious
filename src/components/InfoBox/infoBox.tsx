@@ -1,19 +1,25 @@
 //Components
-import Text from "../Text/text"
-import Button from "../Button/button"
+import Text from "../Text/text";
+import Button from "../Button/button";
 
 //Styles
-import { Container } from "./infoBox.styles"
+import { Container, Section } from "./infoBox.styles";
 
+//Types
+import { IInfoBox } from "./infoBox.types";
 
-function InfoBox() {
+function InfoBox(data: any) {
   return (
     <Container>
-        <Text size="24">cachsdasdasdasd</Text>
-        <Button>cachorro</Button>
-        <Button>cachorro</Button>
+      <Section>
+        <Text size="32">{data.question}</Text>
+      </Section>
+      <Section>
+        <Button>{data.confirm}</Button>
+        <Button>{data.deny}</Button>
+      </Section>
     </Container>
-  )
+  );
 }
 
-export default InfoBox
+export default InfoBox;
