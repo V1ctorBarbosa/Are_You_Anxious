@@ -1,7 +1,14 @@
+//Styles
+import { GlobalStyles } from "./styles/GlobalStyles"
+
 function App() {
 
   return (
-    <div>cachorro</div>
+    <>
+      <GlobalStyles />
+      <div>cachorro</div>
+    </>
+    
   )
 }
 
