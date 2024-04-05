@@ -1,9 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
-    body{
+
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
+
+    * {
         margin: 0;
         padding: 0;
-        background-color: black;
+        font-family: "Reddit Mono", monospace;
+        background-color: ${props => props.theme.black};
     }
 `

@@ -1,15 +1,15 @@
 //Styles
-import { GlobalStyles } from "./styles/GlobalStyles"
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "./styles/GlobalStyles";
+import { theme } from "./styles/themes";
 
 function App() {
-
-  return (
-    <>
-      <GlobalStyles />
-      <div>cachorro</div>
-    </>
-    
-  )
+    return (
+        <ThemeProvider theme={theme}>
+            <GlobalStyles />
+            <div>cachorro</div>
+        </ThemeProvider>
+    );
 }
 
-export default App
+export default App;
