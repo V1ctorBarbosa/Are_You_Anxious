@@ -13,10 +13,14 @@ import { IInfoBox } from "./infoBox.types";
 
 function InfoBox({data, setStep}: IInfoBox) {
 
+  // const handleClickActions = ({data, orientation}: any) => {
+  //   if()
+  // }
+
   return (
     <Container>
       <Section>
-        <Text size="32">{data.info}</Text>
+        <Text size="26">{data.info}</Text>
       </Section>
       <Section>
         {/* {handleButtonOrLink(data.confirm)} */}

@@ -9,4 +9,5 @@ import { handleFontSize } from "./utils"
 export const Container = styled.p<IText>`
     color: ${props => props.theme.white};
     font-size: ${({ size }) => handleFontSize(size)};
+    text-align: center;
 `

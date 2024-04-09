@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
   gap: 20px;
 
-  width: fit-content;
+  width: 50%;
   margin: auto;
 
   padding: 20px 30px;

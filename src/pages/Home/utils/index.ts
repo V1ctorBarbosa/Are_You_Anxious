@@ -2,6 +2,8 @@ import { IQuestionsPath } from "../home.types";
 
 export const handleStepData = (step: IQuestionsPath, currentStep: string) => {
   switch (currentStep) {
+    case 'intro':
+      return step.intro;
     case 'step1':
       return step.step1;
     case 'step2':
