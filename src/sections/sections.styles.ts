@@ -28,6 +28,7 @@ export const Text = styled.p`
 `;
 
 export const Link = styled.a`
+  width: 45%;
   padding: 10px 20px;
 
   border: 1px solid ${(props) => props.theme.white};
@@ -39,6 +40,7 @@ export const Link = styled.a`
 `;
 
 export const Button = styled.button`
+  width: 45%;
   padding: 10px 20px;
 
   border: 1px solid ${(props) => props.theme.white};

@@ -41,13 +41,12 @@ export const questionsPath: IQuestionsPath = {
           step6: {
             id: 6,
             info: "I want to share something with you that talks a little about this. When I'm at my worst, it makes me feel a little better about things Maybe just like it is with me, it will make you feel a little better too :)",
-            confirm: "ok... let's do try this again",
-            deny: "so get me out of here",
+            confirm: "ok... let's do this",
             link: "https://www.youtube.com/watch?v=iEIqVq7EZqE",
           },
           step7: {
             id: 7,
-            info: "vai ficar tudo bem tudo está no seu devido lugar",
+            info: "Don't worry, babe. Everything is in it's right place.",
             confirm: ":)",
           },
     },
@@ -90,13 +89,12 @@ export const questionsPath: IQuestionsPath = {
           step6: {
             id: 6,
             info: "Eu quero compartilhar uma coisa com você. Quando eu me sinto na pior, eu gosto de ver isso. Me faz sentir um pouco melhor comigo mesmo, penso no que é realmente importante, e com sorte, talvez faça você se sentir bem também :)",
-            confirm: "Ok... Me mostra",
+            confirm: "Ok... Vamos lá",
           },
           step7: {
             id: 7,
-            info: "Tente relaxar. Tudo está exatamente onde deveria estar.",
+            info: "Não se preocupe. Tudo está exatamente onde deveria estar.",
             confirm: ":)",
           },
     }
- 
 };

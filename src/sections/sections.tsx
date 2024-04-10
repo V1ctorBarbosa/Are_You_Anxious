@@ -5,6 +5,8 @@ import Step2 from "./step2/step2";
 import Step3 from "./step3/step3";
 import Step4 from "./step4/step4";
 import Step5 from "./step5/step5";
+import Step6 from "./step6/step6";
+import Step7 from "./step7/step7";
 
 //Context
 import { useGlobalContext } from "../context/context";
@@ -29,6 +31,10 @@ function Sections() {
         return <Step4 data={handleData({ language: state.language, step: state.step })}/>;
       case "step5":
         return <Step5 data={handleData({ language: state.language, step: state.step })}/>;
+      case "step6":
+        return <Step6 data={handleData({ language: state.language, step: state.step })}/>;
+      case "step7":
+        return <Step7 data={handleData({ language: state.language, step: state.step })}/>;
       default:
         return <Intro data={handleData({ language: state.language, step: state.step })}/>;
     }

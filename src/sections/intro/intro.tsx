@@ -1,8 +1,5 @@
 //Styles
-import { Container, Section, Button } from "../sections.styles";
-
-//Components
-import Text from "../../components/Text/text";
+import { Container, Section, Button, Text } from "../sections.styles";
 
 //Types
 import { ISectionData } from "../sections.types";
@@ -32,7 +29,7 @@ function Intro(sectionData: ISectionData) {
   return (
     <Container>
       <Section>
-        <Text size="26">{sectionData.data.info}</Text>
+        <Text>{sectionData.data.info}</Text>
       </Section>
       <Section>
         <Button onClick={() => handleAction("confirm")}>

@@ -1,5 +1,5 @@
 //Styles
-import { Container, Section, Button, Text } from "../sections.styles";
+import { Container, Section, Link, Text } from "../sections.styles";
 
 //Types
 import { ISectionData } from "../sections.types";
@@ -7,13 +7,13 @@ import { ISectionData } from "../sections.types";
 //Context
 import { useGlobalContext } from "../../context/context";
 
-function Step5(sectionData: ISectionData) {
+function Step6(sectionData: ISectionData) {
   const { state, setState } = useGlobalContext();
 
   const handleAction = () => {
     setState({
       ...state,
-      step: "step6",
+      step: "step7",
     });
   };
 
@@ -23,15 +23,12 @@ function Step5(sectionData: ISectionData) {
         <Text>{sectionData.data.info}</Text>
       </Section>
       <Section>
-        <Button onClick={() => handleAction()}>
+        <Link href={sectionData.data.link} target="_blank" onClick={() => handleAction()}>
           {sectionData.data.confirm}
-        </Button>
-        <Button onClick={() => handleAction()}>
-          {sectionData.data.deny}
-        </Button>
+        </Link>
       </Section>
     </Container>
   );
 }
 
-export default Step5;
+export default Step6;
