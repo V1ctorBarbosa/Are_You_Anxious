@@ -18,19 +18,19 @@ function Sections() {
   const handleStep = (step: string) => {
     switch (step) {
       case "intro":
-        return <Intro data={() => handleData({ language: state.language, step: state.step })}/>;
+        return <Intro data={handleData({ language: state.language, step: state.step })}/>;
       case "step1":
-        return <Step1 data={() => handleData({ language: state.language, step: state.step })}/>;
+        return <Step1 data={handleData({ language: state.language, step: state.step })}/>;
       case "step2":
-        return <Step2 data={() => handleData({ language: state.language, step: state.step })}/>;
+        return <Step2 data={handleData({ language: state.language, step: state.step })}/>;
       case "step3":
-        return <Step3 data={() => handleData({ language: state.language, step: state.step })}/>;
+        return <Step3 data={handleData({ language: state.language, step: state.step })}/>;
       case "step4":
-        return <Step4 data={() => handleData({ language: state.language, step: state.step })}/>;
+        return <Step4 data={handleData({ language: state.language, step: state.step })}/>;
       case "step5":
-        return <Step5 data={() => handleData({ language: state.language, step: state.step })}/>;
+        return <Step5 data={handleData({ language: state.language, step: state.step })}/>;
       default:
-        return <Intro data={() => handleData({ language: state.language, step: state.step })}/>;
+        return <Intro data={handleData({ language: state.language, step: state.step })}/>;
     }
   };
 

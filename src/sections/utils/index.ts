@@ -4,6 +4,14 @@ import { questionsPath } from "../data/data";
 //Types
 import { IHandleData } from "../sections.types";
 
+const nullObj = {
+    id: 0,
+    info: "",
+    confirm: "",
+    deny: "",
+    link: "",
+}
+
 export const handleData = ({ language, step }: IHandleData) => {
     switch (language) {
       case 'ENG':
@@ -23,7 +31,7 @@ export const handleData = ({ language, step }: IHandleData) => {
           case 'step6':
             return questionsPath.eng.step6;
           default:
-            return null;
+            return nullObj;
         }
       case 'PTBR':
         switch (step) {
@@ -42,9 +50,9 @@ export const handleData = ({ language, step }: IHandleData) => {
           case 'step6':
             return questionsPath.ptbr.step6;
           default:
-            return null;
+            return nullObj;
         }
       default:
-        return null;
+        return nullObj;
     }
   };

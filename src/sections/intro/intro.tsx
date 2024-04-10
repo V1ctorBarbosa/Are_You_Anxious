@@ -4,15 +4,18 @@ import { Container, Section, Button } from "../sections.styles"
 //Components
 import Text from "../../components/Text/text"
 
-function Intro(data: any) {
+//Types
+import { ISectionData } from '../sections.types'
+
+function Intro(sectionData: ISectionData) {
   return (
     <Container>
         <Section>
-            <Text size="26">cachorro</Text>
+            <Text size="26">{sectionData.data.info}</Text>
         </Section>
         <Section>
-          <Button>Cavalor</Button>
-          <Button>cccchcchchchchc</Button>
+          <Button>{sectionData.data.confirm}</Button>
+          <Button>{sectionData.data.deny}</Button>
         </Section>
     </Container>
   )

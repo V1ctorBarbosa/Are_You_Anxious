@@ -23,3 +23,7 @@ export interface IHandleData {
     language: 'ENG' | 'PTBR';
     step: string;
 }
+
+export interface ISectionData {
+    data: IStep
+}
