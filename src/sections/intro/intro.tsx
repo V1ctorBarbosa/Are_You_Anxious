@@ -1,14 +1,18 @@
 //Styles
-import { Container, Section } from "../sections.styles"
+import { Container, Section, Button } from "../sections.styles"
+
+//Components
+import Text from "../../components/Text/text"
 
 function Intro() {
   return (
     <Container>
         <Section>
-
+            <Text size="26">cachorro</Text>
         </Section>
         <Section>
-            
+          <Button>Cavalor</Button>
+          <Button>cccchcchchchchc</Button>
         </Section>
     </Container>
   )

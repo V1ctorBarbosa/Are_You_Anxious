@@ -1,20 +1,17 @@
-//React
-import { useState } from "react";
+// Context
+import { useGlobalState } from "../../context/context";
 
-//Styles
+// Styles
 import { Container } from "./home.styles";
-
-//Utils
-import { handleStepData } from "./utils";
-
-//Data
-import { questionsPath } from "./data/data";
 
 function Home() {
 
+  const { step } = useGlobalState();
+  console.log(step);
+  
   return (
     <Container>
-
+      
     </Container>
   );
 }
