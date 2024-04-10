@@ -1,17 +1,13 @@
-// Context
-import { useGlobalState } from "../../context/context";
-
 // Styles
 import { Container } from "./home.styles";
 
-function Home() {
+//Sections
+import Sections from "../../sections/sections";
 
-  const { step } = useGlobalState();
-  console.log(step);
-  
+function Home() {  
   return (
     <Container>
-      
+      {Sections()}
     </Container>
   );
 }
