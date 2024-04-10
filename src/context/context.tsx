@@ -1,16 +1,21 @@
 //React
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from "react";
 
 //Types
-import { IGlobalState, IGlobalStateContextType } from './types';
+import { IGlobalState, IGlobalStateContextType } from "./types";
 
-const IGlobalStateContext = createContext<IGlobalStateContextType | undefined>(undefined);
+const IGlobalStateContext = createContext<IGlobalStateContextType | undefined>(
+  undefined
+);
 
-export const GlobalStateProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const GlobalStateProvider: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => {
   const [state, setState] = useState<IGlobalState>({
-    step: 'intro',
-    language: 'ENG',
-    sound: false
+    step: "intro",
+    language: "ENG",
+    sound: false,
+    displaySound: false,
   });
 
   return (
@@ -23,7 +28,9 @@ export const GlobalStateProvider: React.FC<{ children: ReactNode }> = ({ childre
 export const useGlobalContext = () => {
   const context = useContext(IGlobalStateContext);
   if (!context) {
-    throw new Error('useIGlobalState deve ser usado dentro de um GlobalStateProvider');
+    throw new Error(
+      "useIGlobalState deve ser usado dentro de um GlobalStateProvider"
+    );
   }
   return context;
 };
