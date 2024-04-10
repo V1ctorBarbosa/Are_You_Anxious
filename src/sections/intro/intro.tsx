@@ -4,7 +4,7 @@ import { Container, Section, Button } from "../sections.styles"
 //Components
 import Text from "../../components/Text/text"
 
-function Intro() {
+function Intro(data: any) {
   return (
     <Container>
         <Section>
