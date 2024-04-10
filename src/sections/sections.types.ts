@@ -5,7 +5,7 @@ export interface IQuestionsPath {
 interface IStep {
   id: number;
   info: string;
-  confirm: string;
+  confirm?: string;
   deny?: string;
   link?: string;
 }
@@ -17,6 +17,7 @@ interface ILanguageSteps {
   step4: IStep;
   step5: IStep;
   step6: IStep;
+  step7: IStep;
 }
 
 export interface IHandleData {

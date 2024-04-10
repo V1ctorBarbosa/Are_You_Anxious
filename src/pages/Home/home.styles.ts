@@ -16,8 +16,7 @@ export const Footer = styled.footer`
     bottom: 0%; 
     left: 50%;
     transform: translate(-50%, -50%); 
-
-    border: 1px solid ${props => props.theme.white};
+    
     padding: 10px 15px;
     border-radius: 10px;
 `

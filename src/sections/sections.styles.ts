@@ -21,6 +21,12 @@ export const Section = styled.section`
   width: 100%;
 `;
 
+export const Text = styled.p`
+  color: ${(props) => props.theme.white};
+  font-size: 26px;
+  text-align: center;
+`;
+
 export const Link = styled.a`
   padding: 10px 20px;
 
