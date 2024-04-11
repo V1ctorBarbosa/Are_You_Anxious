@@ -46,7 +46,7 @@ export const questionsPath: IQuestionsPath = {
           },
           step7: {
             id: 7,
-            info: "Stay here, on the day. It's the only place you really are",
+            info: "Stay here, on the day. It's the only place you really are.",
             confirm: ":)",
           },
     },
@@ -94,7 +94,7 @@ export const questionsPath: IQuestionsPath = {
           },
           step7: {
             id: 7,
-            info: "Fique aqui, no agora. É o único lugar onde você realmente está",
+            info: "Fique aqui, no agora. É o único lugar onde você realmente está.",
             confirm: ":)",
           },
     }

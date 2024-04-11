@@ -34,7 +34,7 @@ function Home() {
         currentTimeRef.current = audio.currentTime;
         audio.pause();
       }
-      audio.volume = 0.3;
+      audio.volume = 0.2;
     }
   }, [state.sound]);
 
@@ -46,7 +46,7 @@ function Home() {
         <Translate onClick={() => handleLanguage({ state, setState })}>
           {buttonText}
         </Translate>
-        <Audio ref={audioRef} src={AruarianDance} style={{ display: "none" }} />
+        <Audio ref={audioRef} src={AruarianDance} loop style={{ display: "none" }} />
       </Footer>
     </Container>
   );

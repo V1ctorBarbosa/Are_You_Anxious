@@ -21,6 +21,10 @@ export const Container = styled.div`
   padding: 20px 30px;
   border-radius: 20px;
   border: solid 1px ${(props) => props.theme.white};
+
+  @media (max-width: 580px) {
+    width: 80%;
+  }
 `;
 
 export const Section = styled.section`
@@ -28,12 +32,21 @@ export const Section = styled.section`
   justify-content: space-evenly;
 
   width: 100%;
+
+  @media (max-width: 790px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 
 export const Text = styled.p`
   color: ${(props) => props.theme.white};
   font-size: 26px;
   text-align: center;
+
+  @media (max-width: 490px) {
+    font-size: 18px;
+  }
 `;
 
 export const Link = styled(motion.a)`
@@ -49,6 +62,14 @@ export const Link = styled(motion.a)`
   text-align: center;
 
   font-size: 16px;
+
+  @media (max-width: 790px) {
+    width: 100%;
+  }
+
+  @media (max-width: 490px) {
+    font-size: 14px;
+  }
 `;
 
 export const Button = styled(motion.button)`
@@ -64,4 +85,12 @@ export const Button = styled(motion.button)`
   text-align: center;
 
   font-size: 16px;
+
+  @media (max-width: 790px) {
+    width: 100%;
+  }
+
+  @media (max-width: 490px) {
+    font-size: 14px;
+  }
 `;
