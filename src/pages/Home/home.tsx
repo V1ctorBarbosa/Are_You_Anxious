@@ -34,7 +34,7 @@ function Home() {
         currentTimeRef.current = audio.currentTime;
         audio.pause();
       }
-      audio.volume = 0.5;
+      audio.volume = 0.3;
     }
   }, [state.sound]);
 

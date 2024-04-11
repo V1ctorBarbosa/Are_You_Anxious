@@ -1,4 +1,7 @@
-export const animationVariants = {
+//Types
+import { IAnimationVariants, IHoverAnimations } from "./types";
+
+export const animationVariants: IAnimationVariants = {
   enter: {
     opacity: 1,
     y: 0,
@@ -13,7 +16,7 @@ export const animationVariants = {
   },
 };
 
-export const hoverAnimations = {
+export const hoverAnimations: IHoverAnimations = {
   whileHover: {
     y: -5,
     transition: { duration: 0.3 },

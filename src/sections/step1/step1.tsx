@@ -23,7 +23,7 @@ function Step1(sectionData: ISectionData) {
   useEffect(() => {
     const interval = setInterval(() => {
       handleAction();
-    }, 3000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 

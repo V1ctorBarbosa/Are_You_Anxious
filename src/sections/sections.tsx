@@ -16,6 +16,8 @@ import { useGlobalContext } from "../context/context";
 
 //Styles
 import { SectionsContainer } from "./sections.styles";
+
+//Animations
 import { animationVariants } from "../styles/animations";
 import { AnimatePresence } from "framer-motion";
 
