@@ -1,5 +1,17 @@
 import styled from "styled-components";
 
+//Animation
+import { motion } from "framer-motion";
+
+export const SectionsContainer = styled(motion.div)`
+  width: 100%;
+  height: 100%;
+  margin: auto;
+
+  background-color: red;
+
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -37,6 +49,7 @@ export const Link = styled.a`
   color: ${(props) => props.theme.white};
 
   cursor: pointer;
+  text-align: center;
 `;
 
 export const Button = styled.button`

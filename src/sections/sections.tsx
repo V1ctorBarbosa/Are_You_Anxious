@@ -1,3 +1,6 @@
+//React
+import { useState, useEffect } from "react";
+
 //Sections
 import Intro from "./intro/intro";
 import Step1 from "./step1/step1";
@@ -11,33 +14,71 @@ import Step7 from "./step7/step7";
 //Context
 import { useGlobalContext } from "../context/context";
 
+//Styles
+import { SectionsContainer } from "./sections.styles";
+import { animationVariants } from "../styles/animations";
+import { AnimatePresence } from "framer-motion";
+
 //Utils
 import { handleData } from "./utils";
 
 function Sections() {
   const { state } = useGlobalContext();
+  const [isAnimating, setIsAnimating] = useState(false); // Flag para controlar a renderização
+
+  useEffect(() => {
+    setIsAnimating(true);
+    return () => setIsAnimating(false);
+  }, [state.step]);
 
   const handleStep = (step: string) => {
+    let sectionData;
+    let sectionComponent: React.ReactNode;
+    sectionData = handleData({ language: state.language, step: step });
+
     switch (step) {
       case "intro":
-        return <Intro data={handleData({ language: state.language, step: state.step })}/>;
+        sectionComponent = <Intro data={sectionData} />;
+        break;
       case "step1":
-        return <Step1 data={handleData({ language: state.language, step: state.step })}/>;
+        sectionComponent = <Step1 data={sectionData} />;
+        break;
       case "step2":
-        return <Step2 data={handleData({ language: state.language, step: state.step })}/>;
+        sectionComponent = <Step2 data={sectionData} />;
+        break;
       case "step3":
-        return <Step3 data={handleData({ language: state.language, step: state.step })}/>;
+        sectionComponent = <Step3 data={sectionData} />;
+        break;
       case "step4":
-        return <Step4 data={handleData({ language: state.language, step: state.step })}/>;
+        sectionComponent = <Step4 data={sectionData} />;
+        break;
       case "step5":
-        return <Step5 data={handleData({ language: state.language, step: state.step })}/>;
+        sectionComponent = <Step5 data={sectionData} />;
+        break;
       case "step6":
-        return <Step6 data={handleData({ language: state.language, step: state.step })}/>;
+        sectionComponent = <Step6 data={sectionData} />;
+        break;
       case "step7":
-        return <Step7 data={handleData({ language: state.language, step: state.step })}/>;
+        sectionComponent = <Step7 data={sectionData} />;
+        break;
       default:
-        return <Intro data={handleData({ language: state.language, step: state.step })}/>;
+        sectionComponent = <Intro data={sectionData} />;
     }
+    return (
+      <AnimatePresence onExitComplete={() => setIsAnimating(false)}>
+        {isAnimating ? null : (
+          <SectionsContainer
+            key={step}
+            variants={animationVariants}
+            initial="exit"
+            animate="enter"
+            exit="exit"
+          >
+            {sectionComponent}
+          </SectionsContainer>
+        )}
+      </AnimatePresence>
+    );
   };
 
   return handleStep(state.step);

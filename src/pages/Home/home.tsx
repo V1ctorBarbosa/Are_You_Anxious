@@ -19,8 +19,6 @@ import { handleDisplaySound, handleLanguage } from "./utils";
 function Home() {
   const { state, setState } = useGlobalContext();
 
-  console.log(state)
-
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const currentTimeRef = useRef<number>(0);
   const buttonText = state.language === "ENG" ? "PTBR" : "ENG";
