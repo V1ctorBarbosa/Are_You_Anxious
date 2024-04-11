@@ -5,18 +5,15 @@ import { motion } from "framer-motion";
 
 export const SectionsContainer = styled(motion.div)`
   width: 100%;
-  height: 100%;
+  min-width: 100%;
   margin: auto;
-
-  background-color: red;
-
 `;
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
 
   width: 50%;
   margin: auto;
@@ -39,7 +36,7 @@ export const Text = styled.p`
   text-align: center;
 `;
 
-export const Link = styled.a`
+export const Link = styled(motion.a)`
   width: 45%;
   padding: 10px 20px;
 
@@ -50,9 +47,11 @@ export const Link = styled.a`
 
   cursor: pointer;
   text-align: center;
+
+  font-size: 16px;
 `;
 
-export const Button = styled.button`
+export const Button = styled(motion.button)`
   width: 45%;
   padding: 10px 20px;
 
@@ -62,4 +61,7 @@ export const Button = styled.button`
   color: ${(props) => props.theme.white};
 
   cursor: pointer;
+  text-align: center;
+
+  font-size: 16px;
 `;

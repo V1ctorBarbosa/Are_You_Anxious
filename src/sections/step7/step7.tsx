@@ -4,6 +4,9 @@ import { Container, Section, Button, Text } from "../sections.styles";
 //Types
 import { ISectionData } from "../sections.types";
 
+//Animation
+import { hoverAnimations } from "../../styles/animations";
+
 function Step7(sectionData: ISectionData) {
 
   return (
@@ -12,7 +15,7 @@ function Step7(sectionData: ISectionData) {
         <Text>{sectionData.data.info}</Text>
       </Section>
       <Section>
-        <Button>
+        <Button {...hoverAnimations}>
           {sectionData.data.confirm}
         </Button>
       </Section>

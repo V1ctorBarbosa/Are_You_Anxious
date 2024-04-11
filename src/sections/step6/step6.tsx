@@ -7,6 +7,9 @@ import { ISectionData } from "../sections.types";
 //Context
 import { useGlobalContext } from "../../context/context";
 
+//Animation
+import { hoverAnimations } from "../../styles/animations";
+
 function Step6(sectionData: ISectionData) {
   const { state, setState } = useGlobalContext();
 
@@ -23,7 +26,12 @@ function Step6(sectionData: ISectionData) {
         <Text>{sectionData.data.info}</Text>
       </Section>
       <Section>
-        <Link href={sectionData.data.link} target="_blank" onClick={() => handleAction()}>
+        <Link
+          {...hoverAnimations}
+          href={sectionData.data.link}
+          target="_blank"
+          onClick={() => handleAction()}
+        >
           {sectionData.data.confirm}
         </Link>
       </Section>

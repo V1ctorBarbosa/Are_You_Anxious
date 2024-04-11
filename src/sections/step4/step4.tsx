@@ -7,6 +7,9 @@ import { ISectionData } from "../sections.types";
 //Context
 import { useGlobalContext } from "../../context/context";
 
+//Animation
+import { hoverAnimations } from "../../styles/animations";
+
 function Step4(sectionData: ISectionData) {
   const { state, setState } = useGlobalContext();
 
@@ -23,10 +26,10 @@ function Step4(sectionData: ISectionData) {
         <Text>{sectionData.data.info}</Text>
       </Section>
       <Section>
-        <Button onClick={() => handleAction()}>
+        <Button {...hoverAnimations} onClick={() => handleAction()}>
           {sectionData.data.confirm}
         </Button>
-        <Button onClick={() => handleAction()}>
+        <Button {...hoverAnimations} onClick={() => handleAction()}>
           {sectionData.data.deny}
         </Button>
       </Section>
