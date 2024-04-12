@@ -11,6 +11,7 @@ import Button from "../../components/Button/button";
 import { useGlobalContext } from "../../context/context";
 
 function Intro(sectionData: ISectionData) {
+
   const { state, setState } = useGlobalContext();
 
   const handleAction = (status: string) => {

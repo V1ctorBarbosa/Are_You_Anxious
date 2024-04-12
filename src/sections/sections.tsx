@@ -26,7 +26,7 @@ import { handleData } from "./utils";
 
 function Sections() {
   const { state } = useGlobalContext();
-  const [isAnimating, setIsAnimating] = useState(false); // Flag para controlar a renderização
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     setIsAnimating(true);

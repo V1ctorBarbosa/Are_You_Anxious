@@ -2,14 +2,16 @@ export interface IQuestionsPath {
   eng: ILanguageSteps;
   ptbr: ILanguageSteps;
 }
-interface IStep {
+
+export interface IStep {
   id: number;
   info: string;
   confirm?: string;
   deny?: string;
   link?: string;
 }
-interface ILanguageSteps {
+
+export interface ILanguageSteps {
   intro: IStep;
   step1: IStep;
   step2: IStep;
@@ -21,10 +23,19 @@ interface ILanguageSteps {
 }
 
 export interface IHandleData {
-    language: 'ENG' | 'PTBR';
-    step: string;
+  language: 'ENG' | 'PTBR';
+  step: string;
+}
+
+export interface INullObj {
+  eng: {
+    data: IStep;
+  };
+  ptbr: {
+    data: IStep;
+  };
 }
 
 export interface ISectionData {
-    data: IStep
+  data: IStep | any;
 }
