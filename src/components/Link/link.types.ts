@@ -1,6 +1,6 @@
 export interface ILink {
-    children: string;
-    linkRef: string;
+    children: React.ReactNode;
+    linkRef: string | undefined;
     openOnNewWindow?: boolean | undefined,
     handleClick?: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>)  => void;
 }

@@ -7,3 +7,9 @@ export interface IQuestionsPath {
       link?: string;
     };
   }
+
+  export interface IIconsData {
+    id: number;
+    link: string;
+    icon: JSX.Element
+  }

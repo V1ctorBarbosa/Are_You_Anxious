@@ -2,11 +2,14 @@
 import { useEffect, useRef } from "react";
 
 // Styles
-import { Container, Footer, Translate, Audio } from "./home.styles";
+import { Container, Footer, FooterSection, Translate, Audio } from "./home.styles";
 import ParticlesComponent from "../../styles/particles";
 
 //Assets
 import AruarianDance from "../../assets/aruarian dance.mp3";
+
+//Data
+import { socialIcons } from "./data/data";
 
 //Context
 import { useGlobalContext } from "../../context/context";
@@ -15,7 +18,7 @@ import { useGlobalContext } from "../../context/context";
 import Sections from "../../sections/sections";
 
 //Utils
-import { handleDisplaySound, handleLanguage } from "./utils";
+import { handleDisplaySound, handleLanguage, handleSocialIcons } from "./utils";
 
 function Home() {
   const { state, setState } = useGlobalContext();
@@ -44,10 +47,15 @@ function Home() {
       {state.isFireworksActive && <ParticlesComponent />}
       {Sections()}
       <Footer>
-        {handleDisplaySound({ state, setState })}
-        <Translate onClick={() => handleLanguage({ state, setState })}>
-          {buttonText}
-        </Translate>
+        <FooterSection>
+          {handleDisplaySound({ state, setState })}
+          <Translate onClick={() => handleLanguage({ state, setState })}>
+            {buttonText}
+          </Translate>
+        </FooterSection>
+        <FooterSection>
+          {handleSocialIcons(socialIcons)}
+        </FooterSection>
         <Audio ref={audioRef} src={AruarianDance} loop />
       </Footer>
     </Container>

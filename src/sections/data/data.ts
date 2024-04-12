@@ -99,3 +99,19 @@ export const questionsPath: IQuestionsPath = {
           },
     }
 };
+
+export const nullObj = {
+  eng: {
+    id: 0,
+    info: "Woops, something strange happened. Refresh the page, please :(",
+    confirm: ":(",
+    deny: ":(",
+  },
+  ptbr: {
+    id: 0,
+    info: "Opa, alguam coisa estranha aconteceu. Atualize a página, por favor :(",
+    confirm: ":(",
+    deny: ":(",
+  }
+
+};

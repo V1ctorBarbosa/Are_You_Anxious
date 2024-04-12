@@ -1,16 +1,8 @@
 //Data
-import { questionsPath } from "../data/data";
+import { questionsPath, nullObj } from "../data/data";
 
 //Types
 import { IHandleData } from "../sections.types";
-
-const nullObj = {
-  id: 0,
-  info: "",
-  confirm: "",
-  deny: "",
-  link: "",
-};
 
 export const handleData = ({ language, step }: IHandleData) => {
   switch (language) {
@@ -33,7 +25,7 @@ export const handleData = ({ language, step }: IHandleData) => {
         case "step7":
           return questionsPath.eng.step7;
         default:
-          return nullObj;
+          return nullObj.eng;
       }
     case "PTBR":
       switch (step) {
@@ -54,7 +46,7 @@ export const handleData = ({ language, step }: IHandleData) => {
         case "step7":
           return questionsPath.ptbr.step7;
         default:
-          return nullObj;
+          return nullObj.ptbr;
       }
     default:
       return nullObj;

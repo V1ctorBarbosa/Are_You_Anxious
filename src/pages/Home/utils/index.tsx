@@ -1,8 +1,12 @@
 //Styles
 import { Volume2, VolumeX } from "lucide-react";
 
+//Components
+import Icon from "../../../components/Icon/icon";
+
 //Types
 import { IGlobalStateContextType } from "../../../context/types";
+import { IIconsData } from "../home.types";
 
 export const handleLanguage = ({
   state,
@@ -20,11 +24,11 @@ export const handleDisplaySound = ({
   state,
   setState,
 }: IGlobalStateContextType) => {
-  if (state.displaySound) return handleIcon({ state, setState });
+  if (state.displaySound) return handleVolumeIcon({ state, setState });
   else return;
 };
 
-const handleIcon = ({ state, setState }: IGlobalStateContextType) => {
+const handleVolumeIcon = ({ state, setState }: IGlobalStateContextType) => {
   if (state.sound)
     return (
       <VolumeX
@@ -40,3 +44,8 @@ const handleIcon = ({ state, setState }: IGlobalStateContextType) => {
       />
     );
 };
+
+export const handleSocialIcons = (iconsData: IIconsData[]) => 
+  iconsData.map((icon) => (
+    <Icon key={icon.id} link={icon.link} socialIcon={icon.icon}/>
+  ))

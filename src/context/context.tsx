@@ -12,7 +12,7 @@ export const GlobalStateProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [state, setState] = useState<IGlobalState>({
-    step: "step6",
+    step: "intro",
     language: "ENG",
     sound: false,
     displaySound: false,

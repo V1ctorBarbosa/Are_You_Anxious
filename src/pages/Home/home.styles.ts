@@ -10,15 +10,22 @@ export const Container = styled.div`
 
 export const Footer = styled.footer`
     display: flex;
+    flex-direction: column;
     gap: 20px;
 
     position: absolute;
     bottom: 0%; 
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -0%); 
     
     padding: 10px 15px;
     border-radius: 10px;
+`
+
+export const FooterSection = styled.section`
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 `
 
 export const Translate = styled.button`
