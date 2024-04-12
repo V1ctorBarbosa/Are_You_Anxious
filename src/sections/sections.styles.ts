@@ -7,6 +7,9 @@ export const SectionsContainer = styled(motion.div)`
   width: 100%;
   min-width: 100%;
   margin: auto;
+
+  cursor: default;
+  background-color: transparent;
 `;
 
 export const Container = styled.div`

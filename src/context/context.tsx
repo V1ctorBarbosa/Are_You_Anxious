@@ -16,6 +16,7 @@ export const GlobalStateProvider: React.FC<{ children: ReactNode }> = ({
     language: "ENG",
     sound: false,
     displaySound: false,
+    isFireworksActive: false,
   });
 
   return (

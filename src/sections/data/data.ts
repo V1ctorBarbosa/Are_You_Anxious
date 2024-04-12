@@ -35,8 +35,8 @@ export const questionsPath: IQuestionsPath = {
           step5: {
             id: 5,
             info: "I see... You know, I read somewhere that Buddhists believe that true happiness lies in being present. I think that every time I feel anxious, my head is anywhere but here in the moment.",
-            confirm: "I don't get it",
-            deny: "Make sense...",
+            confirm: "Make sense...",
+            deny: "I don't get it",
           },
           step6: {
             id: 6,

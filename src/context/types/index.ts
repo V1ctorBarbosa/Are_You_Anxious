@@ -6,6 +6,7 @@ export interface IGlobalState {
     language: 'ENG' | 'PTBR';
     sound: boolean;
     displaySound: boolean;
+    isFireworksActive: boolean;
   }
 
 export interface IGlobalStateContextType {

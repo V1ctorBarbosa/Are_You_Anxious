@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 
 // Styles
 import { Container, Footer, Translate, Audio } from "./home.styles";
+import ParticlesComponent from "../../styles/particles";
 
 //Assets
 import AruarianDance from "../../assets/aruarian dance.mp3";
@@ -40,13 +41,14 @@ function Home() {
 
   return (
     <Container>
+      {state.isFireworksActive && <ParticlesComponent />}
       {Sections()}
       <Footer>
         {handleDisplaySound({ state, setState })}
         <Translate onClick={() => handleLanguage({ state, setState })}>
           {buttonText}
         </Translate>
-        <Audio ref={audioRef} src={AruarianDance} loop style={{ display: "none" }} />
+        <Audio ref={audioRef} src={AruarianDance} loop />
       </Footer>
     </Container>
   );

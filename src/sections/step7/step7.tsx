@@ -1,3 +1,6 @@
+//Context
+import { useGlobalContext } from "../../context/context";
+
 //Styles
 import { Container, Section, Button, Text } from "../sections.styles";
 
@@ -8,6 +11,14 @@ import { ISectionData } from "../sections.types";
 import { hoverAnimations } from "../../styles/animations";
 
 function Step7(sectionData: ISectionData) {
+  const { state, setState } = useGlobalContext();
+
+  const handleClick = () => {
+    setState({
+      ...state,
+      isFireworksActive: !state.isFireworksActive,
+    });
+  };
 
   return (
     <Container>
@@ -15,7 +26,7 @@ function Step7(sectionData: ISectionData) {
         <Text>{sectionData.data.info}</Text>
       </Section>
       <Section>
-        <Button {...hoverAnimations}>
+        <Button {...hoverAnimations} onClick={() => handleClick()}>
           {sectionData.data.confirm}
         </Button>
       </Section>
