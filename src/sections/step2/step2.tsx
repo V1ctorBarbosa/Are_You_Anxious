@@ -1,11 +1,11 @@
 //Styles
-import { Container, Section, Button, Text } from "../sections.styles";
+import { Container, Section, Text } from "../sections.styles";
 
 //Types
 import { ISectionData } from "../sections.types";
 
-//Animation
-import { hoverAnimations } from "../../styles/animations";
+//Components
+import Button from "../../components/Button/button";
 
 //Context
 import { useGlobalContext } from "../../context/context";
@@ -33,10 +33,10 @@ function Step2(sectionData: ISectionData) {
         <Text>{sectionData.data.info}</Text>
       </Section>
       <Section>
-        <Button {...hoverAnimations} onClick={() => handleAction("confirm")}>
+      <Button handleClick={() => handleAction('confirm')}>
           {sectionData.data.confirm}
         </Button>
-        <Button {...hoverAnimations} onClick={() => handleAction("deny")}>
+        <Button handleClick={() => handleAction('deny')}>
           {sectionData.data.deny}
         </Button>
       </Section>

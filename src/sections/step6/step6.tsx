@@ -1,5 +1,5 @@
 //Styles
-import { Container, Section, Link, Text } from "../sections.styles";
+import { Container, Section, Text } from "../sections.styles";
 
 //Types
 import { ISectionData } from "../sections.types";
@@ -7,8 +7,8 @@ import { ISectionData } from "../sections.types";
 //Context
 import { useGlobalContext } from "../../context/context";
 
-//Animation
-import { hoverAnimations } from "../../styles/animations";
+//Components
+import Link from "../../components/Link/link";
 
 function Step6(sectionData: ISectionData) {
   const { state, setState } = useGlobalContext();
@@ -27,10 +27,9 @@ function Step6(sectionData: ISectionData) {
       </Section>
       <Section>
         <Link
-          {...hoverAnimations}
-          href={sectionData.data.link}
-          target="_blank"
-          onClick={() => handleAction()}
+          linkRef={sectionData.data.link}
+          openOnNewWindow
+          handleClick={() => handleAction()}
         >
           {sectionData.data.confirm}
         </Link>
