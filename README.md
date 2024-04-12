@@ -1,30 +1,47 @@
-# React + TypeScript + Vite
+# Are You Anxious?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+'Are You Anxious?' made with Vite, React and Typescript 
 
-Currently, two official plugins are available:
+![Captura de tela 2024-04-12 144350](https://github.com/V1ctorBarbosa/Are_You_Anxious/assets/101783823/f9c2fb16-aa65-4696-8153-b05ad2d4f0b2)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Built with
 
-## Expanding the ESLint configuration
+* HTML5
+* CSS3
+* Typescript
+* React
+* Vite
+* Styled-Components
+* Framer-Motion
+* TSFragments
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 📋 Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+To edit this project, you can fork it, clone down this repository or download it to your computer. You need to have installed:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```
+Visual Studio Code (or any text editor);
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## ⚙️ Installation and Setup Instructions
+
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
+
+Installation:
+
+`yarn`  
+
+To Build:  
+
+`yarn run build`  
+
+To Start Server:
+
+`yarn dev`  
+
+To Visit App:
+
+`localhost:5173/`
+
+---
+Made with ❤️ by [Victor](https://github.com/V1ctorBarbosa) 🐶
