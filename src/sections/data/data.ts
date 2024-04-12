@@ -5,7 +5,7 @@ export const questionsPath: IQuestionsPath = {
     eng: {
         intro: {
             id: 0,
-            info: "First, before we start, do you mind if I play some music?",
+            info: "First, before we start, do you mind if i play some music?",
             confirm: "Sure",
             deny: "I prefer silence",
           },
@@ -34,7 +34,7 @@ export const questionsPath: IQuestionsPath = {
           },
           step5: {
             id: 5,
-            info: "I see... You know, I read somewhere that Buddhists believe that true happiness lies in being present. I think that every time I feel anxious, my head is anywhere but here in the moment.",
+            info: "I see... You know, I read somewhere that buddhists believe that true happiness lies in being present. I think that every time I feel anxious, my head is anywhere but here in the moment.",
             confirm: "Make sense...",
             deny: "I don't get it",
           },
@@ -82,13 +82,13 @@ export const questionsPath: IQuestionsPath = {
           },
           step5: {
             id: 5,
-            info: "Entendo... Sabe, eu li que os budistas acreditar que a felicidade vem do 'estar presente'. No momento, entende?. Pessoalmente, acho que toda vez que eu me sinto muito ansioso, a minha cabeça estava em todos os lugares, menos aqui.",
+            info: "Entendo... Sabe, eu li que os budistas acreditam que a felicidade vem do 'estar presente'. No momento, entende?. Pessoalmente, acho que toda vez que eu me sinto muito ansioso, a minha cabeça estava em todos os lugares, menos aqui.",
             confirm: "Faz sentido...",
             deny: "Eu não sei se entendi...",
           },
           step6: {
             id: 6,
-            info: "Eu quero compartilhar uma coisa com você. Quando eu me sinto mal, eu gosto de ver isso. Me faz sentir um pouco melhor, e com sorte, talvez faça o mesmo por você :)",
+            info: "Eu quero compartilhar uma coisa com você. Quando eu me sinto na pior, eu gosto de ver isso. Me faz sentir um pouco melhor, e com sorte, talvez faça o mesmo por você :)",
             confirm: "Ok, me mostra",
             link: "https://www.youtube.com/watch?v=iEIqVq7EZqE",
           },

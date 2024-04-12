@@ -27,6 +27,8 @@ export const Translate = styled.button`
 
     color: ${props => props.theme.white};
     cursor: pointer;
+    
+    background-color: transparent;
 `
 
 export const Audio = styled.audio`
