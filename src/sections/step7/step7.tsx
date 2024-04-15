@@ -16,7 +16,7 @@ function Step7(sectionData: ISectionData) {
   const handleClick = () => {
     setState({
       ...state,
-      isFireworksActive: !state.isFireworksActive,
+      isFireworksActive: true,
     });
   };
 

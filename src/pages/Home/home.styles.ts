@@ -20,12 +20,16 @@ export const Footer = styled.footer`
     
     padding: 10px 15px;
     border-radius: 10px;
+
+    background-color: transparent;
 `
 
 export const FooterSection = styled.section`
     display: flex;
     justify-content: center;
     gap: 20px;
+
+    background-color: transparent;
 `
 
 export const Translate = styled.button`
